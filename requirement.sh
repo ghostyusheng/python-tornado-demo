@@ -1,0 +1,29 @@
+# 依赖组件
+pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+pip3 install tornado==6.0.2
+pip3 install bson==0.5.8
+pip3 install pymysql
+pip3 install pymongo==3.8.0
+pip3 install elasticsearch==7.0.1
+pip3 install lxml==4.3.3
+pip3 install DBUtils==1.3
+pip3 install pylru==1.2.0
+pip3 install pypinyin==0.35.3
+pip3 install requests
+pip3 install elastic-apm==4.2.2
+#pip3 install JPype1==0.6.3
+pip3 install redis==3.0.1
+pip3 install aredis==1.1.8
+pip3 install motor==2.0.0
+pip3 install aiomysql==0.0.20
+pip3 install aiohttp==3.5.4
+pip3 install elasticsearch-async==6.2.0
+pip3 install numpy==1.21.6
+pip3 install presto-python-client==0.7.0
+pip3 install PyHive==0.6.1
+pip3 install SQLAlchemy==1.3.13
+pip3 install JayDeBeApi==1.1.1
+pip3 install contextvars==2.4
+pip3 install redshift_connector
+pip3 install  kafka-python==2.0.2
+pip3 install pandas==1.3.5

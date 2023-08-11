@@ -1,0 +1,740 @@
+2022-07-11 13:55:24,784 --- USER>None --- ERROR --- [uncatched exception]: name 'R' is not defined
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/requisite.py", line 13, in get
+    request: RequestEntity = R()
+NameError: name 'R' is not defined
+2022-07-11 13:58:10,501 --- USER>None --- ERROR --- [uncatched exception]: 'builtin_function_or_method' object has no attribute 'time'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/requisite.py", line 17, in get
+    if int(abs(ts - time.time())) >= 3 or (not ts):
+AttributeError: 'builtin_function_or_method' object has no attribute 'time'
+2022-07-11 14:24:56,408 --- USER>None --- ERROR --- [uncatched exception]: Expecting value: line 1 column 62 (char 61)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 9, in post
+    cert = self.get_json_argument("cert","")
+  File "/Users/zhangyusheng/code/eng-server/handlers/base.py", line 45, in get_json_argument
+    args = json_decode(self.request.body)
+  File "/usr/local/lib/python3.9/site-packages/tornado/escape.py", line 83, in json_decode
+    return json.loads(to_basestring(value))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 62 (char 61)
+2022-07-11 14:28:02,435 --- USER>None --- ERROR --- [uncatched exception]: Expecting property name enclosed in double quotes: line 1 column 50 (char 49)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 12, in post
+    msg = self.get_json_argument("m","")
+  File "/Users/zhangyusheng/code/eng-server/handlers/base.py", line 45, in get_json_argument
+    args = json_decode(self.request.body)
+  File "/usr/local/lib/python3.9/site-packages/tornado/escape.py", line 83, in json_decode
+    return json.loads(to_basestring(value))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 50 (char 49)
+2022-07-11 14:29:37,750 --- USER>None --- ERROR --- [uncatched exception]: Expecting property name enclosed in double quotes: line 1 column 50 (char 49)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 12, in post
+    msg = self.get_json_argument("m","")
+  File "/Users/zhangyusheng/code/eng-server/handlers/base.py", line 45, in get_json_argument
+    args = json_decode(self.request.body)
+  File "/usr/local/lib/python3.9/site-packages/tornado/escape.py", line 83, in json_decode
+    return json.loads(to_basestring(value))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 50 (char 49)
+2022-07-11 14:30:14,794 --- USER>None --- ERROR --- [uncatched exception]: name 'ekey' is not defined
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 20, in post
+    dkey = Keygen.decrypt(ekey)
+NameError: name 'ekey' is not defined
+2022-07-11 14:51:28,839 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-11 14:51:53,821 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-11 14:53:04,897 --- USER>None --- ERROR --- [uncatched exception]: unsupported operand type(s) for +: 'HTTPHeaders' and 'bytes'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/requisite.py", line 13, in get
+    print('---->', len(self.request.headers + self.request.body))
+TypeError: unsupported operand type(s) for +: 'HTTPHeaders' and 'bytes'
+2022-07-13 13:03:53,913 --- USER>None --- ERROR --- TIMEOUT
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/elasticsearch_async/connection.py", line 98, in perform_request
+    response = yield from self.session.request(method, url, data=body, headers=headers)
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/client.py", line 473, in _request
+    conn = await self._connector.connect(
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/connector.py", line 853, in _create_connection
+    _, proto = await self._create_direct_connection(
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/connector.py", line 968, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 1050, in create_connection
+    sock = await self._connect_sock(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 961, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/selector_events.py", line 500, in sock_connect
+    return await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/elasticsearch_async/connection.py", line 99, in perform_request
+    raw_data = yield from response.text()
+  File "/usr/local/lib/python3.9/site-packages/async_timeout/__init__.py", line 45, in __exit__
+    self._do_exit(exc_type)
+  File "/usr/local/lib/python3.9/site-packages/async_timeout/__init__.py", line 92, in _do_exit
+    raise asyncio.TimeoutError
+asyncio.exceptions.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/eng-server/core/decorator/exception_capture.py", line 23, in wrap
+    res = await func(*args, **kwargs)
+  File "/Users/zhangyusheng/code/eng-server/handlers/nft_hot.py", line 34, in get
+    result, total = await NftService.instance().hot(request)
+  File "/Users/zhangyusheng/code/eng-server/service/nft.py", line 216, in hot
+    response = await const.es.queryByDSL(
+  File "/Users/zhangyusheng/code/eng-server/share/repository/els.py", line 94, in queryByDSL
+    response = await self.esclient.search(
+  File "/usr/local/lib/python3.9/site-packages/elasticsearch_async/transport.py", line 149, in main_loop
+    status, headers, data = yield from connection.perform_request(
+  File "/usr/local/lib/python3.9/site-packages/elasticsearch_async/connection.py", line 110, in perform_request
+    raise ConnectionTimeout('TIMEOUT', str(e), e)
+elasticsearch.exceptions.ConnectionTimeout: ConnectionTimeout caused by - TimeoutError()
+2022-07-13 13:37:38,689 --- USER>None --- ERROR --- 400
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/eng-server/core/decorator/exception_capture.py", line 23, in wrap
+    res = await func(*args, **kwargs)
+  File "/Users/zhangyusheng/code/eng-server/handlers/nft_search.py", line 40, in get
+    result, total = await NftService.instance().search(request)
+  File "/Users/zhangyusheng/code/eng-server/service/nft.py", line 107, in search
+  File "/Users/zhangyusheng/code/eng-server/share/repository/els.py", line 94, in queryByDSL
+    response = await self.esclient.search(
+  File "/usr/local/lib/python3.9/site-packages/elasticsearch_async/transport.py", line 149, in main_loop
+    status, headers, data = yield from connection.perform_request(
+  File "/usr/local/lib/python3.9/site-packages/elasticsearch_async/connection.py", line 120, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python3.9/site-packages/elasticsearch/connection/base.py", line 167, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.RequestError: RequestError(400, 'search_phase_execution_exception', 'failed to create query: For input string: "100000000000000000000keyword=cyn"')
+2022-07-20 13:27:30,901 --- USER>None --- ERROR --- [uncatched exception]: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/aredis/connection.py", line 415, in connect
+    await self._connect()
+  File "/usr/local/lib/python3.9/site-packages/aredis/connection.py", line 594, in _connect
+    reader, writer = await exec_with_timeout(
+  File "/usr/local/lib/python3.9/site-packages/aredis/connection.py", line 39, in exec_with_timeout
+    return await asyncio.wait_for(coroutine, timeout)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/tasks.py", line 442, in wait_for
+    return await fut
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 1065, in create_connection
+    raise exceptions[0]
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 1050, in create_connection
+    sock = await self._connect_sock(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 961, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/selector_events.py", line 500, in sock_connect
+    return await fut
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/asyncio/selector_events.py", line 535, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+TimeoutError: [Errno 60] Connect call failed ('10.121.20.6', 6379)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/aredis/client.py", line 155, in execute_command
+    await connection.send_command(*args)
+  File "/usr/local/lib/python3.9/site-packages/aredis/connection.py", line 486, in send_command
+    await self.connect()
+  File "/usr/local/lib/python3.9/site-packages/aredis/connection.py", line 417, in connect
+    raise ConnectionError()
+aredis.exceptions.ConnectionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/requisite.py", line 21, in get
+    await const.cache_service.setRequisiteKey(key, key)
+  File "/Users/zhangyusheng/code/eng-server/share/service/cache.py", line 62, in setRequisiteKey
+    await self.cache_repository.set(key, value, 60 * 5)
+  File "/Users/zhangyusheng/code/eng-server/share/repository/cache.py", line 49, in set
+    await self._set(key, val, ttl)
+  File "/Users/zhangyusheng/code/eng-server/share/repository/cache.py", line 34, in _set
+    await self._redis_conn.set(key, value, ex=expire_time)
+  File "/usr/local/lib/python3.9/site-packages/aredis/commands/strings.py", line 270, in set
+    return await self.execute_command('SET', *pieces)
+  File "/usr/local/lib/python3.9/site-packages/aredis/client.py", line 165, in execute_command
+    await connection.send_command(*args)
+  File "/usr/local/lib/python3.9/site-packages/aredis/connection.py", line 417, in connect
+    raise ConnectionError()
+aredis.exceptions.ConnectionError
+2022-07-20 14:21:39,089 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:22:10,952 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:22:21,729 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:22:49,882 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:22:59,154 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:23:27,650 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:23:31,378 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:26:03,985 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:26:14,791 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:26:24,630 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:33:04,503 --- USER>None --- ERROR --- [uncatched exception]: invalid literal for int() with base 10: '1658298784.493'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/requisite.py", line 12, in get
+    RequestMiddleware.verifyParams([
+  File "/Users/zhangyusheng/code/eng-server/middleware/request.py", line 24, in verifyParams
+    _val = int(_val)
+ValueError: invalid literal for int() with base 10: '1658298784.493'
+2022-07-20 14:33:07,057 --- USER>None --- ERROR --- [uncatched exception]: invalid literal for int() with base 10: '1658298787.048'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/requisite.py", line 12, in get
+    RequestMiddleware.verifyParams([
+  File "/Users/zhangyusheng/code/eng-server/middleware/request.py", line 24, in verifyParams
+    _val = int(_val)
+ValueError: invalid literal for int() with base 10: '1658298787.048'
+2022-07-20 14:33:11,457 --- USER>None --- ERROR --- [uncatched exception]: invalid literal for int() with base 10: '1658298787.048'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/requisite.py", line 12, in get
+    RequestMiddleware.verifyParams([
+  File "/Users/zhangyusheng/code/eng-server/middleware/request.py", line 24, in verifyParams
+    _val = int(_val)
+ValueError: invalid literal for int() with base 10: '1658298787.048'
+2022-07-20 14:37:14,630 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:38:29,234 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:41:35,648 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 14:41:40,221 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:08:29,895 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:13:01,115 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:13:25,191 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:13:28,532 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:24:43,991 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:30:27,831 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:30:37,920 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:38:06,394 --- USER>None --- ERROR --- [uncatched exception]: decrypt() takes 2 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 22, in post
+    dkey = Keygen.decrypt(uid,cid,ts)
+TypeError: decrypt() takes 2 positional arguments but 4 were given
+2022-07-20 15:50:38,730 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:50:46,465 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 15:53:26,006 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 15:53:34,974 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 15:57:38,486 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:57:39,601 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 15:57:46,512 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 15:57:56,509 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 15:59:05,760 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 15:59:35,358 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 15:59:39,301 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 16:00:11,077 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 16:01:36,321 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 16:03:47,807 --- USER>None --- ERROR --- [uncatched exception]: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/grant.py", line 21, in post
+    ekey = Keygen.encrypt(uid,cid,ts)
+  File "/Users/zhangyusheng/code/eng-server/utils/keygen.py", line 58, in encrypt
+    rand = random.sample(S, len(base64_message))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py", line 449, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2022-07-20 16:18:16,884 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-07-20 16:44:29,401 --- USER>None --- ERROR --- [uncatched exception]: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 13, in post
+    uid = msg.get('uid', '')
+AttributeError: 'str' object has no attribute 'get'
+2022-07-20 16:45:56,341 --- USER>None --- ERROR --- [uncatched exception]: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 14, in post
+    if not (msg.get('s') and msg.get('a') and msg.get('t') and (cid or uid) and msg.get('position') and msg.get('ts') and tk):
+AttributeError: 'str' object has no attribute 'get'
+2022-07-20 16:46:16,432 --- USER>None --- ERROR --- [uncatched exception]: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 15, in post
+    if not (msg.get('s') and msg.get('a') and msg.get('t') and (cid or uid) and msg.get('position') and msg.get('ts') and tk):
+AttributeError: 'str' object has no attribute 'get'
+2022-07-20 16:46:31,405 --- USER>None --- ERROR --- [uncatched exception]: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 15, in post
+    if not (msg.get('s') and msg.get('a') and msg.get('t') and (cid or uid) and msg.get('position') and msg.get('ts') and tk):
+AttributeError: 'str' object has no attribute 'get'
+2022-07-20 16:47:22,690 --- USER>None --- ERROR --- [uncatched exception]: name 'cid' is not defined
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 15, in post
+    if not (msg.get('s') and msg.get('a') and msg.get('t') and (cid or uid) and msg.get('position') and msg.get('ts') and tk):
+NameError: name 'cid' is not defined
+2022-07-20 16:50:16,401 --- USER>None --- ERROR --- [uncatched exception]: 'str' object does not support item assignment
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 35, in post
+    msg['ext']['agent'] = self.request.headers.get('User-Agent')
+TypeError: 'str' object does not support item assignment
+2022-07-20 16:50:37,773 --- USER>None --- ERROR --- [uncatched exception]: 'str' object does not support item assignment
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 35, in post
+    msg['ext']['agent'] = self.request.headers.get('User-Agent')
+TypeError: 'str' object does not support item assignment
+2022-07-20 16:50:40,465 --- USER>None --- ERROR --- [uncatched exception]: 'str' object does not support item assignment
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 35, in post
+    msg['ext']['agent'] = self.request.headers.get('User-Agent')
+TypeError: 'str' object does not support item assignment
+2022-07-20 16:50:43,622 --- USER>None --- ERROR --- [uncatched exception]: 'str' object does not support item assignment
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 35, in post
+    msg['ext']['agent'] = self.request.headers.get('User-Agent')
+TypeError: 'str' object does not support item assignment
+2022-07-20 16:50:50,800 --- USER>None --- ERROR --- [uncatched exception]: 'str' object does not support item assignment
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+    result = await result
+  File "/Users/zhangyusheng/code/eng-server/handlers/log.py", line 35, in post
+    msg['ext']['agent'] = self.request.headers.get('User-Agent')
+TypeError: 'str' object does not support item assignment
+2022-07-20 17:11:37,457 --- USER>None --- ERROR --- [uncatched exception]: HTTP 405: Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 1702, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/tornado/web.py", line 264, in _unimplemented_method
+    raise HTTPError(405)
+tornado.web.HTTPError: HTTP 405: Method Not Allowed
+2022-08-12 13:58:27,945 --- USER>None --- ERROR --- '_Obj' object has no attribute 'email'
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 22, in get
+    RequestMiddleware.verifyParams([
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/middleware/request.py", line 33, in verifyParams
+    raise e
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/middleware/request.py", line 12, in verifyParams
+    getattr(R().GET, k)
+AttributeError: '_Obj' object has no attribute 'email'
+2022-08-12 13:58:36,108 --- USER>GUEST --- ERROR --- Object of type RequestEntity is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    self.out(request)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/base.py", line 39, in out
+    HTTP(self).out(*args, **kwargs)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/http.py", line 35, in out
+    self._handler.finish(json.dumps(response, ensure_ascii=False))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestEntity is not JSON serializable
+2022-08-12 14:36:30,948 --- USER>GUEST --- ERROR --- Object of type RequestEntity is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    self.out(request)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/base.py", line 39, in out
+    HTTP(self).out(*args, **kwargs)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/http.py", line 35, in out
+    self._handler.finish(json.dumps(response, ensure_ascii=False))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestEntity is not JSON serializable
+2022-08-12 14:50:34,587 --- USER>GUEST --- ERROR --- Object of type RequestEntity is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    self.out(request)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/base.py", line 39, in out
+    HTTP(self).out(*args, **kwargs)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/http.py", line 35, in out
+    self._handler.finish(json.dumps(response, ensure_ascii=False))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestEntity is not JSON serializable
+2022-08-12 14:51:11,666 --- USER>GUEST --- ERROR --- Object of type RequestEntity is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    self.out(request)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/base.py", line 39, in out
+    HTTP(self).out(*args, **kwargs)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/http.py", line 35, in out
+    self._handler.finish(json.dumps(response, ensure_ascii=False))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestEntity is not JSON serializable
+2022-08-12 14:51:23,073 --- USER>GUEST --- ERROR --- Object of type RequestEntity is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    self.out(request)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/base.py", line 39, in out
+    HTTP(self).out(*args, **kwargs)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/http.py", line 35, in out
+    self._handler.finish(json.dumps(response, ensure_ascii=False))
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestEntity is not JSON serializable
+2022-08-12 14:54:44,904 --- USER>None --- ERROR --- 'RequestEntity' object has no attribute 'email'
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    print('___>', request.email)
+AttributeError: 'RequestEntity' object has no attribute 'email'
+2022-08-12 14:55:43,295 --- USER>None --- ERROR --- 'RequestEntity' object has no attribute 'email'
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    print('___>', request.email)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/entity/request.py", line 35, in __getattribute__
+    return object.__getattribute__(self, k)
+AttributeError: 'RequestEntity' object has no attribute 'email'
+2022-08-12 15:02:45,853 --- USER>None --- ERROR --- 'RequestEntity' object has no attribute 'email'
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    print('___>', request.email)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/entity/request.py", line 35, in __getattribute__
+    return object.__getattribute__(self, k)
+AttributeError: 'RequestEntity' object has no attribute 'email'
+2022-08-12 15:03:36,534 --- USER>None --- ERROR --- 'RequestEntity' object has no attribute 'email'
+Traceback (most recent call last):
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/handlers/user_search.py", line 27, in get
+    print('___>', request.email)
+  File "/Users/zhangyusheng/code/bigdata-easy-ui/core/entity/request.py", line 35, in __getattribute__
+    return object.__getattribute__(self, k)
+AttributeError: 'RequestEntity' object has no attribute 'email'
